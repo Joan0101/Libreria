@@ -17,7 +17,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * cuando las necesite sabrá dónde enconntrarlas.
  */
 @SpringBootApplication
-public class SimpleApplication {
+public class SimpleApplication { // EMPANADA DE CARNE
 
 	public static void main(String[] args) {
 		SpringApplication.run(SimpleApplication.class, args);
