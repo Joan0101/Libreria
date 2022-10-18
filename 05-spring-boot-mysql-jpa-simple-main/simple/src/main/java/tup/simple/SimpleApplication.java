@@ -17,11 +17,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * cuando las necesite sabrá dónde enconntrarlas.
  */
 @SpringBootApplication
-public class SimpleApplication { // EMPANADA DE CARNE
+public class SimpleApplication { 
 
 	public static void main(String[] args) {
 		SpringApplication.run(SimpleApplication.class, args);
-		//Daniel el mas groso por sus memes
+		
 	}
 
 }
