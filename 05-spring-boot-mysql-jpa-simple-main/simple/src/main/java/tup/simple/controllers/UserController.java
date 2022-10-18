@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import tup.simple.models.User;
-import tup.simple.repositories.UserRepository;
+import tup.simple.repositories.UserRepository;  // ESTA CLASE MANEJA LO QUE RECIBE EL REQUEST, DECIDE QUIEN TIENE QUE HACER EL TRABAJO Y SE LO PASA (clase de gustavo)
 
 /**
  * La anotación @RestController es la combinación de @Controller
