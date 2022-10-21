@@ -34,14 +34,10 @@ import tup.simple.repositories.UserRepository;  // ESTA CLASE MANEJA LO QUE RECI
  * el nombre de una vista.
  */
 @RestController
-// La URL que vaya en la anotación habrá que agregarla detrás del puerto 8080
-// en todas las llamadas a esta aplicación.
-// Por ejemplo @RequestMapping("/user") resultaría en lo siguiente:
-// localhost:8080/user.... y detrás de esto habría que agregar el
-// resto de la URL.
-// En este caso, no necesitamos nada, y queda simplemente localhost:8080
+
 @RequestMapping("")
 public class UserController {
+  
   /**
    * Qué es un bean en Java
    * https://stackoverflow.com/a/3295517/2740402
@@ -102,8 +98,10 @@ public class UserController {
   }
 
   @GetMapping("/all")
+  
   public String getAllUsers() {
     // This returns a JSON or XML with the users
+   
     Iterable<User> iterable = userRepository.findAll();
     /**
      * Lo que viene a continuación se llama text block, 
@@ -129,6 +127,29 @@ public class UserController {
      * celdas de esa fila poner los encabezados, que son los nombres de
      * las columnas o campos de la tabla que está en la base de datos.
      */
+    String els = """
+      <table>
+      <caption>Ejemplo de tabla</caption>
+      <tbody>
+        <tr>
+          <td></td>
+          <th>A</th>
+          <th>B</th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>A1</td>
+          <td>B1</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>A2</td>
+          <td>B2</td>
+        </tr>
+      </tbody>
+    </table>
+        """;
+     
     String resp = """
           <style>
             #users {"
@@ -152,7 +173,7 @@ public class UserController {
           </style>
           <table id ='users'>
             <tr>
-              <th>Id</th>
+              <th>Pepe</th>
               <th>Name</th>
               <th>Email</th>
             </tr>
@@ -171,11 +192,11 @@ public class UserController {
           + "<td>" + user.getEmail() + "</td>"
           + "</tr>";
     }
-    return resp + "</table>";
+    return resp + "</table>" + els;
   }
 
   @GetMapping("")
   public String hola() {
-    return "Hola";
+    return "ENRIQUE EL FUCKING EMPANADA";
   }
 }

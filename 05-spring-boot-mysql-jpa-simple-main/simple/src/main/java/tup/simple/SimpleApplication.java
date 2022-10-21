@@ -16,9 +16,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * marcadas como candidatas a inyección de dependencia. Entonces,
  * cuando las necesite sabrá dónde enconntrarlas.
  */
-@SpringBootApplication
-public class SimpleApplication { 
 
+ 
+@SpringBootApplication
+
+public class SimpleApplication { 
+	
 	public static void main(String[] args) { // sss
 		SpringApplication.run(SimpleApplication.class, args);
 		
