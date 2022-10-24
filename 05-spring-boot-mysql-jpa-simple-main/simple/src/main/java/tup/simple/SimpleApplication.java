@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * que el sistema va a buscar automáticamente entre todos los
  * paquetes que componen el sistema, todas las clases que estén
  * marcadas como candidatas a inyección de dependencia. Entonces,
- * cuando las necesite sabrá dónde enconntrarlas.
+ * cuando las necesite sabrá dónde encontrarlas.
  */
 
  
