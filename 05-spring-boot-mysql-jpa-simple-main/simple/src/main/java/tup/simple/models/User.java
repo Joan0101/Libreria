@@ -40,7 +40,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String genero;
 
-    private String email;
+    private String libro;
+
+    private double precio;
 }
