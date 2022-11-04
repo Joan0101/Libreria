@@ -77,13 +77,13 @@ public class UserController {
     n.setPrecio(precio);
     
     userRepository.save(n);
-    return "Saved";
+    return "Mision completada!";
   }
 
   @PostMapping("/delete/{id}") // Map ONLY POST Requests
   public String deleteUserById(@PathVariable Long id) {
     // @RequestParam means it is a parameter from the GET or POST request
-
+    
     userRepository.deleteById(id);
     return "Deleted";
   }
@@ -99,106 +99,7 @@ public class UserController {
     return userRepository.findById(id).toString();
   }
 
-  
-  @GetMapping("/libros")
-  
-  public String getAlllibros() {
-    // This returns a JSON or XML with the libros
-   
-    Iterable<User> iterable = userRepository.findAll();
-    /**
-     * Lo que viene a continuación se llama text block, 
-     * y es tipo String. El Manual de Java los describe en 
-     * la sección 3.10.6 Text Blocks.
-     * 
-     * La variable resp es de tipo String, y le vamos a asignar un bloque de texto.
-     * Ese bloque de texto es todo que lo que está contenido entre los dos
-     * delimitadores: el de apertura y el de cierre.
-     * El delimitador de apertura es la triple comilla """ que está a la
-     * derecha del igual.
-     * El delimitador de cierre es la triple comilla """ que está al final.
-     * Todo es seguido por el punto y coma, porque es el final de una sentencia.
-     * 
-     * No es buen estilo incluir cadenas largas en un archivo de código fuente.
-     * Esto lo hago solo para no introducir una complicación que no agregaría
-     * nada a los conceptos que estoy discutiendo ahora.
-     * 
-     * Comenzamos por poner unos estilos CSS, para que la tabla quede más linda.
-     * 
-     * Cuando terminamos con los estilos, arrancamos con el HTML de la
-     * tabla misma. Lo primero que hacemos es generar una fila y en las
-     * celdas de esa fila poner los encabezados, que son los nombres de
-     * las columnas o campos de la tabla que está en la base de datos.
-     */
-    
-    String boton = """
-      
-      <a href= http://localhost:8080/ target="_blank" class=button >Comprar</a>
-
-      <style>
-        .button{
-          text-decoration:none;
-          color: green;
-        }
-      </style>
- 
-    """;
-
-    String resp = """
-          <style>
-            #libro {"
-              font-family: Arial, Helvetica, sans-serif;
-              border-collapse: collapse;
-              width: 100%;
-              
-            }
-            body{
-              background-image: url("https://static8.depositphotos.com/1457895/952/v/450/depositphotos_9529877-stock-illustration-books-background.jpg");
-            }
-            #libros td, #libros th {
-              border: 1px solid #ddd;
-              padding: 8px;
-            }
-            #libros tr:nth-child(even){background-color: #f2f2f2;}
-            #libros tr:hover {background-color: #c50000;}
-            #libros th {
-              padding-top: 12px;
-              padding-bottom: 12px;
-              text-align: left;
-              background-color: #04AA6D;
-              color: white;
-            }
-              #libros {
-                margin: 0 auto;
-                display: inline-block;
-              }
-
-          </style>
-          
-          <table id ='libros'>
-            <tr>
-              <th>ID</th>
-              <th>Genero</th>
-              <th>Libro</th>
-              <th>Precio</th>
-              <th>Presione para comprar </th>
-            </tr> 
-            
-        """; 
-        
-    for (User libros : iterable) { // los datos asignados a la tabla
-      resp += "<tr>"
-          + "<td>" + libros.getId() + "</td>"
-          + "<td>" + libros.getGenero() + "</td>"
-          + "<td>" + libros.getLibro() + "</td>"
-          + "<td>" + libros.getPrecio() + "</td>"
-          + "<td>" + boton + "</td>"
-          + "</tr>";
-    } 
-     return resp + "</table>";
-  }
-      
-  @GetMapping("")
+  @GetMapping("") 
   public String main() {
       // CAMBIAR LO QUE VIENE SIENDO EL COLOR DE LIBRERIA 9 LIBROS POR UN AMARILLO LINDO
     String bienvenido = """
@@ -210,21 +111,21 @@ public class UserController {
       <h1>⭐⭐⭐⭐⭐⭐⭐  </h1>
       <h1>⭐⭐⭐⭐⭐⭐⭐ </h1>
       <h1>⭐⭐⭐⭐⭐⭐⭐  </h1>
+      <h1>⭐⭐⭐⭐⭐⭐⭐  </h1>
+      <h1>⭐⭐⭐⭐⭐⭐⭐ </h1>
       <h1>LIBRERIA 9 LIBROS</h1>
       <h1>⭐⭐⭐⭐⭐⭐⭐  </h1>
+      <h1><a href= http://localhost:8080/libros target="_blank" class=btns_more >E N T R A R !</a>  </h1>
+      <h1>  </h1>
       </div>
-      <div class="par">
+      <div class="par">   
       <p>
-      
       </p>
       </div>  
       </div>   
       <div class="btns">
-      <a href= http://localhost:8080/libros target="_blank" class=btns_more >Comprar</a>
-      </div>
-      
-      </div>
-      
+      </div>  
+      </div>  
        <div class="container_outer_img">
        <div class="img-inner">
        <img src='https://img.freepik.com/premium-vector/seamless-pattern-books-glasses-bookmarks-stars-hand-drawn-vector-illustrations-colored-cartoon-ornament-reading-design-fabric-textile-background-wallpaper-print-decor_534604-552.jpg'  alt="" class="container_img"/>
@@ -238,6 +139,12 @@ public class UserController {
       </div>
 
       <style>
+      body {
+        background: #4AE4FF;
+         font-family: lato;
+      }
+   
+
       * {
         margin: 0;
         padding: 0;
@@ -313,11 +220,10 @@ public class UserController {
       .btns_more {
         background: transparent;
         border: 1px solid var(--contrast-color);
-        border-radius: 50px;
+        border-radius: 70px;
         padding: 8px 12px;
         color: #BF307F;
-        font-size: 16px;
-        text-transform: uppercase;
+        font-size: 36px;
         position: relative;
         margin-top: 0px;
         outline: none;
@@ -372,4 +278,272 @@ public class UserController {
     
     return bienvenido;
   }
+  
+  @GetMapping("/libros")
+  
+  public String getAlllibros() {
+    // This returns a JSON or XML with the libros
+   
+    Iterable<User> iterable = userRepository.findAll();
+    
+    String boton = """
+      
+      <a href= http://localhost:8080/libros/descripciones target="_blank" class=button >VER DESCRIPCIONES</a>
+      <style>
+        .button{
+          text-decoration:none;
+          color: green;
+        }
+      </style>
+ 
+    """;
+
+    String tabla = """
+          <style>
+            #libro {"
+              font-family: Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+              
+            }
+            body{
+              background-image: url("https://static8.depositphotos.com/1457895/952/v/450/depositphotos_9529877-stock-illustration-books-background.jpg");
+            }
+            #libros td, #libros th {
+              border: 3px solid #ddd;
+              padding: 13px;
+            }
+            #libros tr:nth-child(n){background-color: #F9FF6E;}
+            #libros tr:hover {background-color: #F66E25;}
+            #libros th {
+              padding-top: 20px;
+              padding-bottom: 20px;
+              text-align: left;
+              background-color: #F6DD25;
+              color: black;
+            }
+              .center {
+                margin-left: auto;
+                margin-right: auto;
+                
+              }
+
+          </style>
+          
+          <table id ='libros'>
+            <tr>
+              <th>ID</th>
+              <th>Genero</th>
+              <th>Libro</th>
+              <th>Precio</th>
+              <th>Descripcion </th>
+            </tr> 
+            
+        """; 
+        
+    for (User libros : iterable) {
+     
+      tabla += "<tr>"
+          + "<td>" + libros.getId() + "</td>"
+          + "<td>" + libros.getGenero() + "</td>"
+          + "<td>" + libros.getLibro() + "</td>"
+          + "<td>" + libros.getPrecio() + "</td>"
+          + "<td>" + boton + "</td>"
+          + "</tr>";
+          
+    } 
+    
+     return tabla + "</table>";
+  }
+
+  @GetMapping("/libros/descripciones")
+  public String descripciones() {
+    String descripciones = """
+
+      <div class="tabs">
+
+  <input type="radio" name="tabs" id="tabone" checked="checked"> 
+  <label for="tabone">Señor de los anillos</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>La novela narra el viaje del protagonista principal, Frodo Bolsón, hobbit de la Comarca, para destruir el Anillo Único y la consiguiente guerra que provocará el enemigo para recuperarlo, ya que es la principal fuente de poder de su creador, el Señor oscuro Sauron. «Tres Anillos para los Reyes Elfos bajo el cielo.</p>
+    
+  </div>
+  
+  <input type="radio" name="tabs" id="tabtwo"> 
+  <label for="tabtwo">Harry Potter</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabthree"> 
+  <label for="tabthree">Harry Potter</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>Harry Potter es una autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo"> 
+  <label for="tabtwo">Harry Potter</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+  </div>
+  
+  <input type="radio" name="tabs" id="tabtwo"> 
+  <label for="tabtwo">Harry Potter</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo"> 
+  <label for="tabtwo">Harry Potter</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo"> 
+  <label for="tabtwo">Harry Potter</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo"> 
+  <label for="tabtwo">Harry Potter</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+  </div>
+
+  <input type="radio" name="tabs" id="tabtwo"> 
+  <label for="tabtwo">Harry Potter</label>
+  <div class="tab">
+    <h1>Descripcion</h1>
+    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+  </div>
+
+
+</div>
+
+
+<a href=http://localhost:8080/libros>Volver</a>
+
+
+      <style>
+      body {
+        background: #4AE4FF;
+         font-family: lato;
+   }
+   
+   
+   a {
+       display: inline-block;
+       position: relative;
+       top: 40px;
+       left: 100px;
+       transform: translate(-50%, -50%);
+       color: #23252f;
+       text-decoration: none;
+       padding: 20px 45px;
+       border-radius: 9px;
+       background: #6EBDFF;
+       box-shadow: 3px 3px 6px #4AE4FF, -3px -3px 6px #4AE4FF;
+       transition: all .3s;
+       /* shine effect */
+       background-repeat: no-repeat;
+       background-position: -135px -135px, 0 0;
+       background-image: -webkit-linear-gradient( top left, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 37%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0.0) 50%);
+       background-size: 250% 250%, 100% 100%;
+       transition: background-position 0s ease;
+   }
+   
+   a:active {
+       border-radius: 25px;
+       border-radius: 9px;
+       background: #4A94FF;
+       box-shadow: inset 3px 3px 6px #296137, inset -3px -3px 6px #9fffd3;
+   }
+   
+   a:hover {
+       transform: translate(-50%, -50%) scale(1.03);
+       background-position: 0 0, 0 0;
+       transition-duration: 0.9s;
+   }
+
+
+
+.tabs {
+	display: flex;
+	flex-wrap: wrap; // make sure it wraps
+}
+.tabs label {
+	order: 1; // Put the labels first
+	display: block;
+	padding: 1rem 2rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+  background: #90CAF9;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+.tabs .tab {
+  order: 99; // Put the tabs last
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+  padding: 1rem;
+  background: #fff;
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+	background: #fff;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+/**
+ * Generic Styling
+*/
+body {
+  background: #eee;
+  min-height: 100vh;
+	box-sizing: border-box;
+	padding-top: 10vh;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 60rem;
+  margin: 0 auto;
+  font-size: 112%;
+}
+
+
+      </style>
+
+        """;
+
+    
+    return descripciones;
+  }
+      
+  
 }
