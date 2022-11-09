@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LibreriaApplication",
+            "request": "launch",
+            "mainClass": "tup.libreria.LibreriaApplication",
+            "projectName": "simple"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-SimpleApplication<simple>",
             "request": "launch",
             "cwd": "${workspaceFolder}",

@@ -1,4 +1,4 @@
-package tup.simple.models;
+package tup.libreria.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,7 +34,7 @@ import lombok.Data;
 @Data
 
 @Entity // This tells Hibernate to make a table out of this class
-public class User {
+public class Libros {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

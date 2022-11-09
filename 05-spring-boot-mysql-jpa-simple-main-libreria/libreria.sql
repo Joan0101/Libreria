@@ -4,10 +4,10 @@ CREATE DATABASE IF NOT EXISTS libreria;
 
 USE libreria;
 
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS libros;
 
 
-CREATE TABLE IF NOT EXISTS user (
+CREATE TABLE IF NOT EXISTS libros (
     id int UNSIGNED NOT NULL AUTO_INCREMENT,
     genero varchar (20) DEFAULT NULL,
     libro varchar(255) DEFAULT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS user (
 ) ENGINE = InnoDB AUTO_INCREMENT = 10;
 
 INSERT INTO
-    user (id, genero, libro, precio)
+    libros (id, genero, libro, precio)
 VALUES
     (1, 'Fantasia', ' El señor de los anillos ', 2200),
     (2, 'Fantasia', ' Harry Potter ',1800),
@@ -25,5 +25,5 @@ VALUES
     (5,'Aventura','Las Aventuras de Tom Sawyer',1300),
     (6,'Aventura','Viaje al Centro de La Tierra',1800),
     (7,'Drama','La Metamorfosis',2500),
-    (8,'Drama','Estudio en Esmeralda',1900),
+    (8,'Drama','Estudio en Escarlata',1900),
     (9,'Drama','Rebelion en la Granja',1500);

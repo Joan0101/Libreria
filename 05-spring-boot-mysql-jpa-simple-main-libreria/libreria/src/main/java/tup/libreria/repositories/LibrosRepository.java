@@ -1,9 +1,9 @@
-package tup.simple.repositories;
+package tup.libreria.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import tup.simple.models.User;
+import tup.libreria.models.Libros;
 
 /**
  * Esta anotación le indica a Spring Boot que las clases
@@ -21,5 +21,5 @@ import tup.simple.models.User;
  * a programar nada, o casi nada.
  */
 @Repository
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface LibrosRepository extends CrudRepository<Libros, Long> {
 }

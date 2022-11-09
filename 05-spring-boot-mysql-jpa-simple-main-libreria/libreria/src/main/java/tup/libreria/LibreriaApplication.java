@@ -1,4 +1,4 @@
-package tup.simple;
+package tup.libreria;
 
 /*
 Esta es la clase principal de la aplicación.
@@ -20,10 +20,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  
 @SpringBootApplication
 
-public class SimpleApplication { 
+public class LibreriaApplication { 
 	
 	public static void main(String[] args) { // sss
-		SpringApplication.run(SimpleApplication.class, args);
+		SpringApplication.run(LibreriaApplication.class, args);
 		
 	}
 
