@@ -5,7 +5,7 @@
             "name": "Launch LibreriaApplication",
             "request": "launch",
             "mainClass": "tup.libreria.LibreriaApplication",
-            "projectName": "simple"
+            "projectName": "libreria"
         },
         {
             "type": "java",
