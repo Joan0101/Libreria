@@ -132,6 +132,7 @@ public class LibrosController {
              </div>
            </div>
         </div>
+        <h1> </h1>
         <h1>Aca no hay nada 🤓🤓🤓🤓🤓🤓</h1>
         <h1>Aca no hay nada 🤓🤓🤓🤓🤓🤓</h1>
         <h1>Aca no hay nada 🤓🤓🤓🤓🤓🤓</h1>
@@ -343,29 +344,20 @@ public class LibrosController {
           @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
           
           body {
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 300;
-            line-height: 1.42em;
-            color:#A7A1AE;
-            background-color:#1F2739;
+            
+            background-image: url("https://w.wallhaven.cc/full/m9/wallhaven-m9md18.jpg");
+            background-size: cover;
+
           }
-          
-          h1 {
-            font-size:3em; 
-            font-weight: 300;
-            line-height:1em;
-            text-align: center;
-            color: #4DC3FA;
-          }
-          
-          h2 {
-            font-size:1em; 
+
+          h2 { // DISENIO ENCABEZADO
+            font-size: 18px; 
             font-weight: 300;
             text-align: center;
             display: block;
             line-height:1em;
             padding-bottom: 2em;
-            color: #FB667A;
+            color: #0083FF;
           }
           
           h2 a {
@@ -400,6 +392,7 @@ public class LibrosController {
               margin: 0 auto;
             display: table;
             padding: 0 0 8em 0;
+            
           }
           
           .container td, .container th {
@@ -408,9 +401,10 @@ public class LibrosController {
             padding-left:2%;  
           }
           
-          /* Background-color of the odd rows */
-          .container tr:nth-child(odd) {
-              background-color: #323C50;
+          /* Background-color of the odd rows Y SE TRABAJA EL BLUR */
+          .container tr:nth-child(odd) { 
+              background: rgba(255, 255, 255, 0.4);
+              backdrop-filter: blur(1px);
           }
           
           /* Background-color of the even rows */
@@ -450,6 +444,7 @@ public class LibrosController {
           .container th:nth-child(4) { display: none; }
           }
 
+          
           </style>
 
 
@@ -457,10 +452,10 @@ public class LibrosController {
 <table class="container">
   <thead>
     <tr>
-      <th><h1>Sites</h1></th>
-      <th><h1>Views</h1></th>
-      <th><h1>Clicks</h1></th>
-      <th><h1>Price</h1></th>
+      <th><h1>ID</h1></th>
+      <th><h1>Genero</h1></th>
+      <th><h1>Libro</h1></th>
+      <th><h1>Precio</h1></th>
     </tr>
         
         """; 
@@ -682,7 +677,6 @@ body {
 
         """;
 
-    
     return descripciones;
   }
       
