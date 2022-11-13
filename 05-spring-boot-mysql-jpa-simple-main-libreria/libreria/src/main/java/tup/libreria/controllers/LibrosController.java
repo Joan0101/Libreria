@@ -115,7 +115,7 @@ public class LibrosController {
       <h1>⭐⭐⭐⭐⭐⭐⭐ </h1>
       <h1>LIBRERIA 9 LIBROS</h1>
       <h1>⭐⭐⭐⭐⭐⭐⭐  </h1>
-      <h1><a href= http://localhost:8080/libros target="_blank" class=btns_more >E N T R A R !</a>  </h1>
+      <h1><a href= "http://localhost:8080/libros" target="_blank" class=btns_more >E N T R A R !</a>  </h1>
       <h1>  </h1>
       </div>
       <div class="par">   
