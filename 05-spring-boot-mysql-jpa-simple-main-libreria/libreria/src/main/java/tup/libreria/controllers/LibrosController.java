@@ -514,52 +514,52 @@ public class LibrosController {
   </div>
 
   <input type="radio" name="tabs" id="tabthree"> 
-  <label for="tabthree">Harry Potter</label>
+  <label for="tabthree">Fahrenheit451</label>
   <div class="tab">
     <h1>Descripcion</h1>
-    <p>Harry Potter es una autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotás autopor la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autotásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+    <p>Ambientada en el siglo XXIV, Fahrenheit 451, cuenta la historia del protagonista Guy Montag. Al principio, Montag disfruta de su oficio de bombero es decir quemando libros conservados ilegalmente así como las casas de sus dueños. Sin embargo, de pronto, Montag empieza a cuestionar el valor de su profesión y a su vez, su vida. A lo largo de la novela, Montag lucha contra su existencia y acaba huyendo de esta sociedad opresiva, de censura; se une a un grupo subterráneo de intelectuales. Con sus amigos recién conocidos, Montag, testigo de la destrucción atómica de la ciudad, se dedica a reconstruir una literata y culta sociedad.</p>
   </div>
 
-  <input type="radio" name="tabs" id="tabtwo"> 
-  <label for="tabtwo">Harry Potter</label>
+  <input type="radio" name="tabs" id="tabfour"> 
+  <label for="tabfour">Robinson Crusoe</label>
   <div class="tab">
     <h1>Descripcion</h1>
-    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+    <p>Es un relato ficticio sobre un náufrago, basado en las aventuras de Alexander Selkik, un marino que naufrago cerca de la isla del archipiélago Juan Fernández frente a las islas de Chile, donde permaneció cinco años, relata la soledad y la construcción de una sociedad ideal al margen del mundo.</p>
   </div>
   
-  <input type="radio" name="tabs" id="tabtwo"> 
-  <label for="tabtwo">Harry Potter</label>
+  <input type="radio" name="tabs" id="tabfive"> 
+  <label for="tabfive">Las Aventuras de Tom Sawyer</label>
   <div class="tab">
     <h1>Descripcion</h1>
-    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+    <p>En una población a orillas del río Mississippi vive Tom Sawyer, un muchacho travieso, experto en saltarse las normas y escabullirse de la escuela para embarcarse en las aventuras más peligrosas y disparatadas.</p>
   </div>
 
-  <input type="radio" name="tabs" id="tabtwo"> 
-  <label for="tabtwo">Harry Potter</label>
+  <input type="radio" name="tabs" id="tabsix"> 
+  <label for="tabsix">Viaje al Centro de La Tierra</label>
   <div class="tab">
     <h1>Descripcion</h1>
-    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+    <p>El profesor Lidenbrock, que une a su condición de verdadero sabio una terquedad sin límites, descifra un viejo pergamino devolviendo pacientemente su sentido a los incomprensibles signos que en él se contienen. ¡Extraordinarios peligros de la lectura! El descifrado de aquel texto arrastrará inevitablemente al propio Lidenbrok, a su joven sobrino Axel y al valeroso cazador Hans Bjelke hasta el mismísimo centro de la Tierra, poblado de animales antediluvianos, tempestades terribles y otros riesgos sin mayor importancia.</p>
   </div>
 
-  <input type="radio" name="tabs" id="tabtwo"> 
-  <label for="tabtwo">Harry Potter</label>
+  <input type="radio" name="tabs" id="tabseven"> 
+  <label for="tabseven">La Metamorfosis</label>
   <div class="tab">
     <h1>Descripcion</h1>
-    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+    <p>Al despertar Gregorio Samsa una mañana, tras un sueño intranquilo, encontróse en su cama convertido en un monstruoso insecto.</p>
   </div>
 
-  <input type="radio" name="tabs" id="tabtwo"> 
-  <label for="tabtwo">Harry Potter</label>
+  <input type="radio" name="tabs" id="tabeigth"> 
+  <label for="tabeigth">Estudio en escarlata</label>
   <div class="tab">
     <h1>Descripcion</h1>
-    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+    <p>Un cadáver hallado en extrañas circunstancias pone en marcha los reflejos deductivos de Holmes, mientras la policía oficial se pierde en divagaciones equivocadas o arresta a inocentes ciudadanos. Un nuevo asesinato parece complicar la historia, pero a Holmes se la aclara.</p>
   </div>
 
-  <input type="radio" name="tabs" id="tabtwo"> 
-  <label for="tabtwo">Harry Potter</label>
+  <input type="radio" name="tabs" id="tabnine"> 
+  <label for="tabnine">Rebelion en la Granja</label>
   <div class="tab">
     <h1>Descripcion</h1>
-    <p>Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.</p>
+    <p>Los animales de la granja de los Jones se sublevan contra sus dueños humanos y los vencen. Pero pronto surgen entre ellos rivalidades y envidias, y algunos se alían con los amos que derrocaron, traicionando su propia identidad y los intereses de su clase.</p>
   </div>
 
 
