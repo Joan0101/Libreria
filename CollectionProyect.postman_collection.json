@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "c3d358c4-bc6d-4a63-b85f-86d1f7f9e8c2",
+		"name": "Collection Proyect",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24402244"
+	},
+	"item": [
+		{
+			"name": "Proyecto",
+			"item": [
+				{
+					"name": "Local",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tabla",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/libros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "descripciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/libros/descripciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"libros",
+								"descripciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/add?genero=\"\" &libro= \"\"&precio=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add"
+							],
+							"query": [
+								{
+									"key": "genero",
+									"value": "\"\" "
+								},
+								{
+									"key": "libro",
+									"value": " \"\""
+								},
+								{
+									"key": "precio",
+									"value": ""
+								}
+							]
+						},
+						"description": "Ingresa un valor String de genero, un valor String de Libro(titulo de libro) y un valor double correspondiente al valor monetario de este"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/delete/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delete",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
