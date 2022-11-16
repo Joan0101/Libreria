@@ -520,14 +520,6 @@ public class LibrosController {
 // cambiar el color blanco de la descripcion por un azul bien clarito pero que quede a tono con el fondop.
 
 
-
-
-
-
-
-
-
-
   @GetMapping("/libros/descripciones")
   public String descripciones() {
     String descripciones = """
