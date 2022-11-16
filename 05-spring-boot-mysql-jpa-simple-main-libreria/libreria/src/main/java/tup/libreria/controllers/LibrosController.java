@@ -99,42 +99,6 @@ public class LibrosController {
     return userRepository.findById(id).toString();
   }
 
-  @GetMapping("e")
-  public String f(){
-    String h="";
-    
-    String a = """
-      <div class="container">
-  
-      <h2>Google Material Design in CSS3<small>Inputs</small></h2>
-      
-      <form>
-        
-        <div class="group">      
-          <input type="text" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label>Name</label>
-        </div>
-          
-        <div class="group">      
-          <input type="text" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label>Email</label>
-        </div>
-        
-      </form>
-          
-      <p class="footer">
-        a <a href="https://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3" target="_blank">tutorial</a> by <a href="https://scotch.io" target="_blank">scotch.io</a>
-      </p>
-      
-    </div>
-        """;
-        return a;
-  }
-
   @GetMapping("") 
   public String main() {
       // CAMBIAR LO QUE VIENE SIENDO EL COLOR DE LIBRERIA 9 LIBROS POR UN AMARILLO LINDO
@@ -326,16 +290,24 @@ public class LibrosController {
     String boton = """
       
       
-      <div class="center"><a href="http://localhost:8080/libros/descripciones" class="button">Press Here</a></div>
+      <div class="center"><a href="http://localhost:8080/libros/descripciones" class="button">Descripciones</a></div>
       <style>
+      @media screen (min-width: 600px) and (max-width: 800px) {
+        a.button {
+          
+        }
+      }
       body {
-        background-color: #fafafa;
+        font-color: #FF2C5C; 
         font-family: sans-serif;
         font-weight: 300;
+        
       }
       
-      .button {
-        background-color: #FF5722;
+      
+      .button { // MEJORAR BOTON
+        background-color: #32495F;
+        backdrop-filter: blur(2px);
         border-radius: 6px;
         box-shadow: 2px 2px 1px rgba(0,0,0,0.4);
         color: white;
@@ -343,22 +315,17 @@ public class LibrosController {
         font-size: 1.5em;
         font-weight: 400;
         overflow: hidden;
-        padding: 2em 4em;
-        position: relative;
+        padding: 3em 4em;
         text-decoration: none;
         transition: all 200ms ease-out;
+        text-align: center;
       }
       
       .button:hover {
         box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
       }
       
-      .center {
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%,-50%);
-      }
+      
       
       .ripple {
         background-color: rgba(255,255,255,0.3);
@@ -406,17 +373,18 @@ public class LibrosController {
           .blue { color: #185875; }
           .yellow { color: #FFF842; }
           
-          .container th h1 {
+          .container th h1 { // CABECERA
               font-weight: bold;
-              font-size: 1em;
-            text-align: left;
-            color: #185875;
+              font-size: 28px;
+              text-align: left;
+              color: #FF2C5C;
           }
           
-          .container td {
-              font-weight: normal;
-              font-size: 1em;
-            -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+          .container td { // contenido
+              font-weight: 200;
+              color: #CD5E74;
+              font-size: 20px;
+              -webkit-box-shadow: 0 2px 2px -2px #0E1119;
                -moz-box-shadow: 0 2px 2px -2px #0E1119;
                     box-shadow: 0 2px 2px -2px #0E1119;
           }
@@ -426,47 +394,48 @@ public class LibrosController {
               overflow: hidden;
               width: 80%;
               margin: 0 auto;
-            display: table;
-            padding: 0 0 8em 0;
+              display: table;
+              padding: 0 0 8em 0;
             
           }
           
           .container td, .container th {
               padding-bottom: 2%;
               padding-top: 2%;
-            padding-left:2%;  
+              padding-left:2%;  
           }
           
           /* Background-color of the odd rows Y SE TRABAJA EL BLUR */
           .container tr:nth-child(odd) { 
-              background: rgba(255, 255, 255, 0.4);
-              backdrop-filter: blur(1px);
+              background: rgba(27, 33, 49, 0.8);
+              backdrop-filter: blur(2px);
           }
           
           /* Background-color of the even rows */
           .container tr:nth-child(even) {
-              background-color: #2C3446;
+              background: rgba(38, 50, 78, 0.8);
+              backdrop-filter: blur(2px);
           }
           
           .container th {
               background-color: #1F2739;
           }
           
-          .container td:first-child { color: #FB667A; }
+          .container td:first-child { color: #FF327C; } // Numeros de id
           
           .container tr:hover {
-             background-color: #464A52;
-          -webkit-box-shadow: 0 6px 6px -6px #0E1119;
-               -moz-box-shadow: 0 6px 6px -6px #0E1119;
-                    box-shadow: 0 6px 6px -6px #0E1119;
+             background-color: #FF5500;
+            -webkit-box-shadow: 0 6px 6px -6px #00487A;
+               -moz-box-shadow: 0 6px 6px -6px #00487A;
+                    box-shadow: 0 6px 6px -6px #00487A;
           }
           
           .container td:hover {
-            background-color: #FFF842;
-            color: #403E10;
+            background-color: #003B61;
+            color: #FF327C; // color letras hover
             font-weight: bold;
             
-            box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+            box-shadow: #002842 -1px 1px, #002842 -2px 2px, #002842 -3px 3px, #002842 -4px 4px, #002842 -5px 5px, #002842 -6px 6px;
             transform: translate3d(6px, -6px, 0);
             
             transition-delay: 0s;
@@ -598,12 +567,7 @@ public class LibrosController {
 
 
       <style>
-      body {
-        background: #4AE4FF;
-         font-family: lato;
-   }
-   
-   
+      
    a {
        display: inline-block;
        position: relative;
@@ -655,12 +619,13 @@ public class LibrosController {
   transition: background ease 0.2s;
 }
 .tabs .tab {
-  order: 99; // Put the tabs last
+  order: 99; // DESCRIPCION
   flex-grow: 1;
 	width: 100%;
 	display: none;
   padding: 1rem;
-  background: #fff;
+  font-weight: bold;
+  backdrop-filter: blur(2px);
 }
 .tabs input[type="radio"] {
 	display: none;
@@ -688,7 +653,7 @@ public class LibrosController {
  * Generic Styling
 */
 body {
-  background: #eee;
+  background-image: url("https://www.todofondos.net/wp-content/uploads/fondo-de-pantalla-atardecer-bosque-minimo-4k-8k-naturaleza-scaled.jpg");
   min-height: 100vh;
 	box-sizing: border-box;
 	padding-top: 10vh;
