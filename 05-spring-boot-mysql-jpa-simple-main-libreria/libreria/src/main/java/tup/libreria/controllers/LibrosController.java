@@ -87,7 +87,7 @@ public class LibrosController {
     // @RequestParam means it is a parameter from the GET or POST request
     
     userRepository.deleteById(id);
-    return "Deleted";
+    return "Borradisimo";
   }
 
   @GetMapping("/{id}")
@@ -119,7 +119,7 @@ public class LibrosController {
       <h1>⭐⭐⭐⭐⭐⭐⭐ </h1>
       <h1>LIBRERIA 9 LIBROS</h1>
       <h1>⭐⭐⭐⭐⭐⭐⭐  </h1>
-      <h1><a href= "http://localhost:8080/libros" target="_blank" class=btns_more >E N T R A R !</a>  </h1>
+      <h1><a href= "http://localhost:8080/libros" class=btns_more >E N T R A R !</a>  </h1>
       <h1>  </h1>
       </div>
       <div class="par">   
