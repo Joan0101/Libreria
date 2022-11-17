@@ -299,40 +299,40 @@ public class LibrosController {
       
       <div class="center"><a href="http://localhost:8080/libros/descripciones" class="button">Descripciones</a></div>
       <style>
-      @media screen (min-width: 600px) and (max-width: 800px) {
-        a.button {
-          
-        }
-      }
       body {
-        font-color: #FF2C5C; 
+        background-color: #fafafa;
         font-family: sans-serif;
         font-weight: 300;
-        
       }
       
-      
-      .button { // MEJORAR BOTON
-        background-color: #32495F;
-        backdrop-filter: blur(2px);
+      .button {
+        background: rgba(240, 56, 114, 0.8);
+        backdrop-filter: blur(5px);
         border-radius: 6px;
         box-shadow: 2px 2px 1px rgba(0,0,0,0.4);
-        color: white;
+        color: black;
         display: block;
         font-size: 1.5em;
-        font-weight: 400;
+        font-weight: bold;
         overflow: hidden;
-        padding: 3em 4em;
+        padding: 30px 50px;
+        position: relative;
         text-decoration: none;
         transition: all 200ms ease-out;
         text-align: center;
       }
       
       .button:hover {
-        box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
       }
       
-      
+      .center {
+        left: 50%;
+        right: 50%;
+        position: relative;
+        padding: 30px 700px;
+        transform: translate(-50%,-50%);
+      }
       
       .ripple {
         background-color: rgba(255,255,255,0.3);
@@ -343,7 +343,7 @@ public class LibrosController {
         transform: scale(0);
         transition: all 500ms ease-out;
       }
-        }
+      
       </style>
  
     """;
@@ -355,27 +355,14 @@ public class LibrosController {
           
           body {
             
-            background-image: url("https://w.wallhaven.cc/full/m9/wallhaven-m9md18.jpg");
+            
             background-size: cover;
+            
+              background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://w.wallhaven.cc/full/m9/wallhaven-m9md18.jpg");
+          
 
-          }
-
-          h2 { // DISENIO ENCABEZADO
-            font-size: 18px; 
-            font-weight: 300;
-            text-align: center;
-            display: block;
-            line-height:1em;
-            padding-bottom: 2em;
-            color: #0083FF;
           }
           
-          h2 a {
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #FB667A;
-            text-decoration: none;
-          }
           
           .blue { color: #185875; }
           .yellow { color: #FFF842; }
@@ -388,7 +375,7 @@ public class LibrosController {
           }
           
           .container td { // contenido
-              font-weight: 200;
+              font-weight: 300;
               color: #CD5E74;
               font-size: 20px;
               -webkit-box-shadow: 0 2px 2px -2px #0E1119;
@@ -486,14 +473,6 @@ public class LibrosController {
 
      return tabla + "</table>" + boton;
   }
-
-
-//REPOSICIONAR BOTON PARA QUE QUEDE AL LADO DE LA TABLA. AUMENTAR TAMANIO DE LETRA DE HEADER Y COLOR AZUL MAS CLARO TIPO CYAN;
-
-// DESPUES COLOR NARANJA ELEMENTOS DE TABLA Y BACKGROUND QUE LE MANDE A MOTURA.
-//ponerle color blanco a las letras del boton de descripciones
-// ponerle fondo de la montania
-// cambiar el color blanco de la descripcion por un azul bien clarito pero que quede a tono con el fondop.
 
 
   @GetMapping("/libros/descripciones")
@@ -610,7 +589,9 @@ public class LibrosController {
        transition-duration: 0.9s;
    }
 
-
+h1 {
+  color: #ABD3FF;
+}
 
 .tabs {
 	display: flex;
