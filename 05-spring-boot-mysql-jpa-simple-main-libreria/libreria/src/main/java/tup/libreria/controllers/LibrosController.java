@@ -66,11 +66,12 @@ public class LibrosController {
    */
   @Autowired
   private LibrosRepository userRepository;
-
+    
   @PostMapping("/add") // Map ONLY POST Requests
   public String addNewUser(@RequestParam String genero, @RequestParam String libro, @RequestParam double precio) {
+    //Añade a través de un método POST añade un libro tomando en cuenta los parámetros: “genero”, “libro” y “precio”
     // @RequestParam means it is a parameter from the GET or POST request
-
+    
     Libros n = new Libros();
     n.setGenero(genero);
     n.setLibro(libro);
@@ -82,6 +83,7 @@ public class LibrosController {
 
   @PostMapping("/delete/{id}") // Map ONLY POST Requests
   public String deleteUserById(@PathVariable Long id) {
+    //Elimina de la base de datos una fila correspondiente a la id del libro seleccionado
     // @RequestParam means it is a parameter from the GET or POST request
     
     userRepository.deleteById(id);
@@ -92,6 +94,7 @@ public class LibrosController {
   public String findUsersById(@PathVariable Long id) {
     // @PathVariable indica que el parámetro id, de tipo Long, es una
     // variable que viene en la URI.
+    // Muestra los datos de un libro seleccionado a traves de la Id correspondiente 
     /**
      * https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById-ID-
      * Optional<T> findById(ID id)
@@ -101,6 +104,7 @@ public class LibrosController {
 
   @GetMapping("") 
   public String main() {
+      //muestra la pagina principal del proyecto
       // CAMBIAR LO QUE VIENE SIENDO EL COLOR DE LIBRERIA 9 LIBROS POR UN AMARILLO LINDO
     String bienvenido = """
       <div class= 'container'>
@@ -281,6 +285,9 @@ public class LibrosController {
   }
   
   @GetMapping("/libros")
+  //Puede accederse al presionar el botón “entrar” de la página ("")
+  //Muestra una tabla con todos los libros y sus datos correspondientes
+
   
   public String getAlllibros() {
     // This returns a JSON or XML with the libros
@@ -490,6 +497,7 @@ public class LibrosController {
 
 
   @GetMapping("/libros/descripciones")
+  //Muestra una página en la cual a través de tabs muestra las descripciones de los libros
   public String descripciones() {
     String descripciones = """
 
